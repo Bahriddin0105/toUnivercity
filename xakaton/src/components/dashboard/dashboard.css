@@ -1,0 +1,65 @@
+.body {
+    font-family: 'Copperplate';
+  margin: 0%;
+  padding-top: 15px;
+  /* background: linear-gradient(-45deg, #23a6d5, #e6e60b, #23d5ab); */
+  /* background-size: 400% 400%; */
+  /* animation: gradient 15s ease infinite; */
+  /* height: 100vh; */
+  background-image: url('../../img/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+.asosiy {
+  width: 600px;
+  height: 600px;
+  margin-left: 130px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.344);
+  /* background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.479)); */
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  opacity: 0.5;
+  padding-top: 30px;
+}
+
+.icon {
+  margin-top: 25px;
+  margin-left: 25px;
+  color: rgba(0, 0, 255, 0.699);
+  transform: scale(5, 5);
+}
+.iconS {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  /* margin-top: 50px; */
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.144);
+  padding: 20px;
+}
+.form-floating{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 18px;
+    height: 70px;
+    background-color: transparent;
+
+    outline: none;
+}
+.cont{
+    font-size: 20px;
+}
