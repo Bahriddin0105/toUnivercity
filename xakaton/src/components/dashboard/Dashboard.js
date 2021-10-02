@@ -4,10 +4,23 @@ import {Link} from 'react-router-dom'
 import { FaUserGraduate } from "react-icons/fa";
 import "./dashboard.css";
 export default class Dashboard extends Component {
-  toP = () => {
-    document.querySelectorAll(".name").style.marginTop = "-50px";
-    document.querySelectorAll(".name").style.fontSize = "10px";
-  };
+    state={
+        username:'',
+        fullname: '',
+        email: ''
+    }
+enter=()=>{
+    var username = document.getElementById('floatingInputUsername').value
+    var fullname = document.getElementById('floatingInputFullname').value
+    var email = document.getElementById('floatingInputEmail').value
+    if(username==null || fullname==null || email==null){
+        document.querySelector('.dbtn').disabled=true;
+    } else {
+        document.querySelector('.dbtn').disabled=false;
+
+    }
+}
+ 
   render() {
     return (
       <div className="body">
@@ -19,9 +32,10 @@ export default class Dashboard extends Component {
 
             <div class="form-floating mb-3">
                 <input
+                required
                   type="text"
                   class="form-control"
-                  style={{height:'70px', fontSize:'22px', backgroundColor:'transparent', borderRadius:'15px'}}
+                  style={{height:'70px', fontSize:'22px', backgroundColor:'transparent', borderRadius:'15px', color: 'white'}}
                   id="floatingInputUsername"
                   placeholder="Username"
                 />
@@ -30,9 +44,10 @@ export default class Dashboard extends Component {
              
               <div class="form-floating mb-3">
                 <input
+                required
                   type="text"
                   class="form-control"
-                  style={{height:'70px', fontSize:'22px', backgroundColor:'transparent', borderRadius:'15px'}}
+                  style={{height:'70px', fontSize:'22px', backgroundColor:'transparent', borderRadius:'15px', color: 'white'}}
                   id="floatingInputFullname"
                   placeholder="Fullname"
                 />
@@ -41,15 +56,16 @@ export default class Dashboard extends Component {
              
               <div class="form-floating mb-3">
                 <input
+                required
                   type="email"
                   class="form-control"
-                  style={{height:'70px', fontSize:'22px', backgroundColor:'transparent', borderRadius:'15px'}}
+                  style={{height:'70px', fontSize:'22px', backgroundColor:'transparent', borderRadius:'15px', color: 'white'}}
                   id="floatingInputEmail"
                   placeholder="name@example.com"
                 />
                 <label style={{color:'white'}} for="floatingInput">Email address</label>
               </div>
-              <Link to='/test'><Button variant="outline-primary" className='btn'>Testni boshlash</Button></Link>
+              <div className='dbtn'><Button onClick={this.enter()} variant="outline-primary" className='btn'><Link to='/test'>Testni boshlash</Link></Button></div>
           </Container>
         </div>
       </div>
