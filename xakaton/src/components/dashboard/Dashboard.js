@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Container } from "react-bootstrap";
-import {Link} from 'react-dom'
+import {Link} from 'react-router-dom'
 import { FaUserGraduate } from "react-icons/fa";
 import "./dashboard.css";
 export default class Dashboard extends Component {
@@ -49,7 +49,7 @@ export default class Dashboard extends Component {
                 />
                 <label style={{color:'white'}} for="floatingInput">Email address</label>
               </div>
-              <Link to='/test'><Button variant="outline-primary">Testga kirish</Button></Link>
+              <Link to='/test'><Button variant="outline-primary" className='btn'>Testni boshlash</Button></Link>
           </Container>
         </div>
       </div>
