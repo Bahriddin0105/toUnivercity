@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { Button, Container } from "react-bootstrap";
-import { Redirect } from "react-router-dom";
+import { Button, Container, Modal } from "react-bootstrap";
+import { Redirect, Link } from "react-router-dom";
 import logo from "../../img/logoone.png";
 import "./dashboard.css";
 export default class Dashboard extends Component {
   state = {
     edit: false,
+    show:false,
+    // shows:false,
   };
   enter = () => {
     var username = document.querySelector("#floatingInputUsername").value;
@@ -14,19 +16,36 @@ export default class Dashboard extends Component {
     if (username != "") {
       if (fullname != "") {
         if (email != "") {
+          // console.log('b')
           this.setState({
-            edit: true,
+            
+            show:true,
           });
-
-          return <Redirect push to="/test" />;
+          
         }
       }
     }
+this.handleClose()
+    
   };
-
+  handleClose=()=>{
+    this.setState({
+      show:false,
+    })
+  }
+openTest=()=>{
+  var shows=this.state.shows
+  if(shows){
+    this.setState({
+    show:true,
+  })
+  }
+  
+}
   render() {
-    const { edit } = this.state;
+    const { edit, show } = this.state;
     return (
+      
       <div className="body">
         <div className="asosiy">
           <div className="iconS">
@@ -92,6 +111,34 @@ export default class Dashboard extends Component {
                 Email address
               </label>
             </div>
+
+
+
+
+
+
+            <Modal show={show} onHide={this.handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Bu test sizning qaysi sohaga qiziqishingiz borligini aniqlab beradi</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={this.handleClose}>
+            Close
+            
+          </Button>
+         <Link to='/test'> <Button variant="primary">
+            Testni boshlash
+            
+          </Button></Link>
+        </Modal.Footer>
+      </Modal>
+
+
+
+
+
+
             <div className="dbtn">
               {/* <Link to="/test"> */}
               <Button
@@ -101,7 +148,7 @@ export default class Dashboard extends Component {
               >
                 Testni boshlash
               </Button>
-              {edit ? <Redirect push to="/test" /> : ""}
+             
               {/* </Link> */}
             </div>
           </Container>
