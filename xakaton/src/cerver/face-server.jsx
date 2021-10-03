@@ -2,7 +2,7 @@ const questions = [
   {
 		_id: '5fe5c299db9b000a30e07701',
 		title: 'Learn the legal system.',
-		category: 'Dough, Mozzarella',
+		category: {title: "ART", value: 0},
 		variants: [
       {_id: '5fe5c299db9b000a30e077011', title: 'Very Interested', value: 1},
 		  {_id: '5fe5c299db9b000a30e077012', title: 'Interested', value: 2},
@@ -13,7 +13,7 @@ const questions = [
   {
 		_id: '5fe5c299db9b000a30e07702',
 		title: 'Observe human behavior',
-		category: 'Dough, Mozzarella',
+		category: {title: "ART", value: 0},
 		variants: [
       {_id: '5fe5c299db9b000a30e077021', title: 'Very Interested', value: 1},
 		  {_id: '5fe5c299db9b000a30e077022', title: 'Interested', value: 2},
@@ -24,7 +24,7 @@ const questions = [
   {
 		_id: '5fe5c299db9b000a30e07703',
 		title: 'Code an app or website.',
-		category: 'Dough, Mozzarella',
+		category: {title: "IT", value: 0},
 		variants: [
       {_id: '5fe5c299db9b000a30e077031', title: 'Very Interested', value: 1},
 		  {_id: '5fe5c299db9b000a30e077032', title: 'Interested', value: 2},
@@ -35,7 +35,7 @@ const questions = [
   {
 		_id: '5fe5c299db9b000a30e07704',
 		title: 'Breakfas Sendwichree fghwe',
-		category: 'Dough, Mozzarella',
+		category: {title: "Teach", value: 0},
 		variants: [
       {_id: '5fe5c299db9b000a30e077041', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 1},
 		  {_id: '5fe5c299db9b000a30e077042', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 2},

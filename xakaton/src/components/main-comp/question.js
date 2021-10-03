@@ -2,7 +2,7 @@
 
 import { Variant } from "./style";
 
-function Question({ askTitle, category, variants, order, onNextQuestion}) {
+function Question({ askTitle, variants, order, categoryVal, onBtnAndNextQuestion}) {
   let s=1;
   return (
     <div className='place'>
@@ -19,7 +19,7 @@ function Question({ askTitle, category, variants, order, onNextQuestion}) {
       <div className='variants'>
         <div>
           {variants.map((variant) => (
-            <Variant key={variant._id} onClick={() => onNextQuestion()}>
+            <Variant key={variant._id} onClick={() => onBtnAndNextQuestion(variant.value, categoryVal)}>
               <div className='order'>{s++}</div>
               <span>{variant.title}</span>
             </Variant>
