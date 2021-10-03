@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Container } from "react-bootstrap";
 import {Link} from 'react-router-dom'
-import { FaUserGraduate } from "react-icons/fa";
+// import { FaUserGraduate } from "react-icons/fa";
 import "./dashboard.css";
 export default class Dashboard extends Component {
     state={
@@ -9,24 +9,25 @@ export default class Dashboard extends Component {
         fullname: '',
         email: ''
     }
-enter=()=>{
-    var username = document.getElementById('floatingInputUsername').value
-    var fullname = document.getElementById('floatingInputFullname').value
-    var email = document.getElementById('floatingInputEmail').value
-    if(username==null || fullname==null || email==null){
-        document.querySelector('.dbtn').disabled=true;
-    } else {
-        document.querySelector('.dbtn').disabled=false;
+// enter=()=>{
+//   console.log('aaaaaaaa')
+//     var username = document.getElementById('floatingInputUsername').value
+//     var fullname = document.getElementById('floatingInputFullname').value
+//     var email = document.getElementById('floatingInputEmail').value
+//     if(username==null || fullname==null || email==null){
+//         document.querySelector('.dbtn').disabled=true;
+//     } else {
+//         document.querySelector('.dbtn').disabled=false;
 
-    }
-}
+//     }
+// }
  
   render() {
     return (
       <div className="body">
         <div className="asosiy">
           <div className="iconS">
-            <FaUserGraduate className="icon" />
+            {/* <FaUserGraduate className="icon" /> */}
           </div>
             <Container className='cont'>
 
@@ -65,7 +66,7 @@ enter=()=>{
                 />
                 <label style={{color:'white'}} for="floatingInput">Email address</label>
               </div>
-              <div className='dbtn'><Button onClick={this.enter()} variant="outline-primary" className='btn'><Link to='/test'>Testni boshlash</Link></Button></div>
+              <div className='dbtn'><Button  variant="outline-primary" className='btn'><Link to='/test'>Testni boshlash</Link></Button></div>
           </Container>
         </div>
       </div>
