@@ -31,16 +31,14 @@ export default class Test extends Component {
 
   render() {
     const { tests } = this.state;
-    // const length = tests.length
     let order = 1;
-    console.log(tests);
     return (
       <Container>
         <div className='box'>
           <div className='slider'>
             {tests.map(({ _id, title, variants }) => (
               <>
-                {order === 10 ? (
+                {order >= 10 ? (
                   <Link to='/natija'>
                     <button className='btn btn-primary'>Show result</button>
                   </Link>

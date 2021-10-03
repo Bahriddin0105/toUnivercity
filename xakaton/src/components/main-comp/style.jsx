@@ -7,13 +7,26 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     background: linear-gradient(#ffffff, #00d4ff);
+    .slider{
+      transition: all .8s ease-out;
+    }
+    .box{
+      width: 1100px;
+      height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
     .place{
       width: 1000px;
       height: 600px;
       background: #bcfcfc;
-      box-shadow: 10px 30px 40px rgb(1, 134, 134);
+      box-shadow: 5px 15px 30px rgb(1, 134, 134);
       border-radius: 20px;
       overflow: hidden;
+      margin: 30px 20px 80px 20px;
       .scrol{
         height: 10px;
         background: rgba(17, 255, 255, 0.842);
