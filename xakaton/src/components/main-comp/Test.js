@@ -9,7 +9,12 @@ import { getQuestions } from "../../cerver/face-server";
 export default class Test extends Component {
   state = {
     tests: [],
-    categorys: [],
+    categorys: {
+      IT: "",
+      Jdwu: "",
+      Jdhwu: "",
+      Jdhiuwu: ""
+    },
     transform: 0,
   };
 
@@ -18,6 +23,16 @@ export default class Test extends Component {
     this.setState({
       tests,
     });
+  }
+
+//   async componentDidMount() {
+//     // GET request using axios with async/await
+//     const response = await axios.get('https://api.npms.io/v2/search?q=react');
+//     this.setState({ totalReactPackages: response.data.total })
+// }
+
+  handleBtn = (e, category) => {
+    category += e;
   }
 
   nextQuestion = () => {
@@ -38,10 +53,12 @@ export default class Test extends Component {
           <div className='slider'>
             {tests.map(({ _id, title, variants }) => (
               <>
-                {order >= 10 ? (
-                  <Link to='/natija'>
+                {order >= 4 ? (
+                  <div className="d-flex justify-content-center h-50 align-items-center m-5 p-5">
+                    <Link to='/natija'>
                     <button className='btn btn-primary'>Show result</button>
                   </Link>
+                  </div>
                 ) : (
                   <Question
                     key={_id}

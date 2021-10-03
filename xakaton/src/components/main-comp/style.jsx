@@ -6,7 +6,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#ffffff, #00d4ff);
+    background: linear-gradient(#ffffff, #0055ff);
     .slider{
       transition: all .8s ease-out;
     }
@@ -74,13 +74,14 @@ const Variant = styled.div `
     height: 60px;
     border-radius: 20px;
     background: #fff;
+    color: #0a0a4e;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
     margin: 15px 0;
     padding: 0 20px;
     cursor: pointer;
     transition: all .3s linear;
     &:hover{
-      background: rgba(48, 255, 255, 0.842);
+      background: #0099ff;
       color: #fff;
       .order{
         /* background: #00355f; */
