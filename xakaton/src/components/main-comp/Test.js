@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Container, Variant} from './style'
-// import {Link} from 'react-router-dom'
 export default class Test extends Component {
     state = {
         
@@ -39,7 +38,6 @@ export default class Test extends Component {
                         </div>
                     </div>
                 </div>
-                {/* <Link to='/natija'>natija</Link> */}
             </Container>
         )
     }

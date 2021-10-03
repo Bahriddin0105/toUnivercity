@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-// import $ from 'jQuery'
 import { Button, Container } from "react-bootstrap";
-import { Link, Redirect } from "react-router-dom";
-import logo from "../../img/logo.jpg";
-// import { FaUserGraduate } from "react-icons/fa";
+import { Redirect } from "react-router-dom";
+import logo from "../../img/logoone.png";
 import "./dashboard.css";
 export default class Dashboard extends Component {
   state = {
@@ -13,32 +11,25 @@ export default class Dashboard extends Component {
     var username = document.querySelector("#floatingInputUsername").value;
     var fullname = document.querySelector("#floatingInputFullname").value;
     var email = document.querySelector("#floatingInputEmail").value;
-    if(username!=''){
-      if(fullname!=''){
-        if(email!=''){
+    if (username != "") {
+      if (fullname != "") {
+        if (email != "") {
           this.setState({
-            edit:true,
-          })
-          console.log('aaa')
-          
-          return(
-            <Redirect push to='/test' />
-            
+            edit: true,
+          });
 
-          )
+          return <Redirect push to="/test" />;
         }
       }
     }
-  
   };
 
   render() {
-    const {edit}=this.state
+    const { edit } = this.state;
     return (
       <div className="body">
         <div className="asosiy">
           <div className="iconS">
-            {/* <FaUserGraduate className="icon" /> */}
             <img src={logo} className="icon" />
           </div>
           <Container className="cont">
@@ -110,9 +101,7 @@ export default class Dashboard extends Component {
               >
                 Testni boshlash
               </Button>
-                  {
-                    edit?<Redirect push to='/test' />:''
-                  }
+              {edit ? <Redirect push to="/test" /> : ""}
               {/* </Link> */}
             </div>
           </Container>
