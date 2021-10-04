@@ -22,11 +22,15 @@ export default class Dashboard extends Component {
         if (email !== "") {
           this.setState({
             show: true,
-            username: ucername,
+            // username: ucername,
           });
         }
       }
     }
+    var user = ucername.toUpperCase();
+    this.setState({
+      username: user,
+    });
   };
 
   render() {

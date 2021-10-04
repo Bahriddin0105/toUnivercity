@@ -81,10 +81,14 @@
   /* text-decoration: underline; */
   line-height: 1.2;
 }
+.modal-footer {
+  justify-content: space-evenly !important;
+}
 .modal-content {
-  background-color: url("../../img/modal.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  color: black;
+  background-color: url("../../img/modal.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 .modal-title {
   margin: auto;
