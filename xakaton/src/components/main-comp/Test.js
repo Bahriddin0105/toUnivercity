@@ -10,6 +10,12 @@ export default class Test extends Component {
   state = {
     tests: [],
     transform: 0,
+    category: [
+      {title: 'ART', value: 0},
+      {title: 'IT', value: 0},
+      {title: 'Teach', value: 0},
+      {title: 'Tech', value: 0},
+    ],
   };
 
   componentDidMount() {
@@ -17,18 +23,25 @@ export default class Test extends Component {
     this.setState({
       tests,
     });
+    alert("salom dunyo");
   }
 
-  handleBtnAndNextQuestion = (e, categoryVal) => {
-    categoryVal += e;
-    console.log(categoryVal + "  value=" + e);
+  handleBtnAndNextQuestion = (e, categoryTitle) => {
+    this.state.category.map((category) => {
+      if(categoryTitle === category.title){
+        category.value += e;
+        let value = category.value;
+        this.setState({value})
+        console.log("categoty value=" + value + "  value=" + e);
+      }
+    })
 
     let transform = this.state.transform;
     transform -= 680;
     document.querySelector(
       ".slider"
     ).style.transform = `translateY(${transform}px)`;
-    this.setState({ transform, categoryVal });
+    this.setState({ transform });
   };
 
   render() {
@@ -40,7 +53,7 @@ export default class Test extends Component {
           <div className='slider'>
             {tests.map(({ _id, title, variants, category }) => (
               <>
-                {order >= 4 ? (
+                {order >= 6 ? (
                   <div className="d-flex justify-content-center h-50 align-items-center m-5 p-5">
                     <Link to='/natija'>
                     <button className='btn btn-primary'>Show result</button>
@@ -52,7 +65,7 @@ export default class Test extends Component {
                     askTitle={title}
                     variants={variants}
                     order={order++}
-                    categoryVal = {category.value}
+                    category = {category}
                     onBtnAndNextQuestion={this.handleBtnAndNextQuestion}
                   />
                 )}
