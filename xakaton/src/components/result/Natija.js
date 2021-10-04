@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Test from '../main-comp/Test';
 export default class Natija extends Component {
 	render() {
 		return (

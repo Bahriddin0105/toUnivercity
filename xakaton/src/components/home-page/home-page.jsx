@@ -8,20 +8,6 @@ import '../../style/ionicons/css/ionicons.min.css'
 import '../../style/lightbox/css/lightbox.min.css'
 import '../../style/owlcarousel/assets/owl.carousel.min.css'
 
-// import "../../style/jquery/jquery.min";
-  // import "../../style/jquery/jquery-migrate.min";
-  // import "../../style/bootstrap/js/bootstrap.bundle.min";
-  // import "../../style/easing/easing.min";
-  // import "../../style/superfish/hoverIntent.js";
-  // import "../../style/superfish/superfish.min";
-  // import "../../style/wow/wow.min";
-  // import "../../style/waypoints/waypoints.min";
-  // import "../../style/counterup/counterup.min";
-  // import "../../style/owlcarousel/owl.carousel.min";
-  // import "../../style/isotope/isotope.pkgd.min";
-  // import "../../style/lightbox/js/lightbox.min";
-  // import "../../style/touchSwipe/jquery.touchSwipe.min";
-
   import './main'
 import Home from "./style";
 
