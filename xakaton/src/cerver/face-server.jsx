@@ -2,7 +2,7 @@ const questions = [
   {
 		_id: '5fe5c299db9b000a30e07701',
 		title: 'Learn the legal system.',
-		category: {title: "ART", value: 0},
+		category: 'ART',
 		variants: [
       {_id: '5fe5c299db9b000a30e077011', title: 'Very Interested', value: 1},
 		  {_id: '5fe5c299db9b000a30e077012', title: 'Interested', value: 2},
@@ -13,7 +13,7 @@ const questions = [
   {
 		_id: '5fe5c299db9b000a30e07702',
 		title: 'Observe human behavior',
-		category: {title: "ART", value: 0},
+		category: 'ART',
 		variants: [
       {_id: '5fe5c299db9b000a30e077021', title: 'Very Interested', value: 1},
 		  {_id: '5fe5c299db9b000a30e077022', title: 'Interested', value: 2},
@@ -24,7 +24,7 @@ const questions = [
   {
 		_id: '5fe5c299db9b000a30e07703',
 		title: 'Code an app or website.',
-		category: {title: "IT", value: 0},
+		category: 'IT',
 		variants: [
       {_id: '5fe5c299db9b000a30e077031', title: 'Very Interested', value: 1},
 		  {_id: '5fe5c299db9b000a30e077032', title: 'Interested', value: 2},
@@ -35,7 +35,7 @@ const questions = [
   {
 		_id: '5fe5c299db9b000a30e07704',
 		title: 'Breakfas Sendwichree fghwe',
-		category: {title: "Teach", value: 0},
+		category: 'Teach',
 		variants: [
       {_id: '5fe5c299db9b000a30e077041', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 1},
 		  {_id: '5fe5c299db9b000a30e077042', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 2},
@@ -43,39 +43,39 @@ const questions = [
 		  {_id: '5fe5c299db9b000a30e077044', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 4},
     ],
 	},
-  // {
-	// 	_id: '5fe5c299db9b000a30e07705',
-	// 	title: 'Breakfas Sendwichreet eufhweu fghwe',
-	// 	category: 'Dough, Mozzarella',
-	// 	variants: [
-  //     {_id: '5fe5c299db9b000a30e077051', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 1},
-	// 	  {_id: '5fe5c299db9b000a30e077052', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 2},
-	// 	  {_id: '5fe5c299db9b000a30e077053', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 3},
-	// 	  {_id: '5fe5c299db9b000a30e077054', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 4},
-  //   ],
-	// },
-  // {
-	// 	_id: '5fe5c299db9b000a30e07706',
-	// 	title: 'Breakfas Sendwichreet eeuhfeh fghwe',
-	// 	category: 'Dough, Mozzarella',
-	// 	variants: [
-  //     {_id: '5fe5c299db9b000a30e077061', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 1},
-	// 	  {_id: '5fe5c299db9b000a30e077062', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 2},
-	// 	  {_id: '5fe5c299db9b000a30e077063', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 3},
-	// 	  {_id: '5fe5c299db9b000a30e077064', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 4},
-  //   ],
-	// },
-  // {
-	// 	_id: '5fe5c299db9b000a30e07707',
-	// 	title: 'Breakfas Sendwichreet eufhweue euhfeh fghwe',
-	// 	category: 'Dough, Mozzarella',
-	// 	variants: [
-  //     {_id: '5fe5c299db9b000a30e077071', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 1},
-	// 	  {_id: '5fe5c299db9b000a30e077072', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 2},
-	// 	  {_id: '5fe5c299db9b000a30e077073', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 3},
-	// 	  {_id: '5fe5c299db9b000a30e077074', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 4},
-  //   ],
-	// },
+  {
+		_id: '5fe5c299db9b000a30e07705',
+		title: 'Breakfas Sendwichreet eufhweu fghwe',
+		category: 'Teach',
+		variants: [
+      {_id: '5fe5c299db9b000a30e077051', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 1},
+		  {_id: '5fe5c299db9b000a30e077052', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 2},
+		  {_id: '5fe5c299db9b000a30e077053', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 3},
+		  {_id: '5fe5c299db9b000a30e077054', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 4},
+    ],
+	},
+  {
+		_id: '5fe5c299db9b000a30e07706',
+		title: 'Breakfas Sendwichreet eeuhfeh fghwe',
+		category: 'Teach',
+		variants: [
+      {_id: '5fe5c299db9b000a30e077061', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 1},
+		  {_id: '5fe5c299db9b000a30e077062', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 2},
+		  {_id: '5fe5c299db9b000a30e077063', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 3},
+		  {_id: '5fe5c299db9b000a30e077064', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 4},
+    ],
+	},
+  {
+		_id: '5fe5c299db9b000a30e07707',
+		title: 'Breakfas Sendwichreet eufhweue euhfeh fghwe',
+		category: 'IT',
+		variants: [
+      {_id: '5fe5c299db9b000a30e077071', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 1},
+		  {_id: '5fe5c299db9b000a30e077072', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 2},
+		  {_id: '5fe5c299db9b000a30e077073', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 3},
+		  {_id: '5fe5c299db9b000a30e077074', title: 'Pizzas csuhfs fbasufbaihf cahjsbc', value: 4},
+    ],
+	},
   // {
 	// 	_id: '5fe5c299db9b000a30e07708',
 	// 	title: 'Breakfas Sendwichreet eufhweue euhfeh fghwe',
