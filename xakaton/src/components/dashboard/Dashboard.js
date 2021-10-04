@@ -100,7 +100,12 @@ export default class Dashboard extends Component {
 
             <Modal show={show} onHide={this.handleClose}>
               <Modal.Header>
-                <Modal.Title>Salom {username}</Modal.Title>
+                <Modal.Title>
+                  <div className="header">
+                    {" "}
+                    Salom <span className="user">{username}</span>
+                  </div>
+                </Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <div className="bodyTitle">
@@ -110,12 +115,18 @@ export default class Dashboard extends Component {
                 </div>
               </Modal.Body>
               <Modal.Footer>
-                <Button variant="secondary" onClick={this.handleClose}>
+                <Button
+                  className="but1"
+                  variant="secondary"
+                  onClick={this.handleClose}
+                >
                   Yo'q
                 </Button>
                 <Link to="/test">
                   {" "}
-                  <Button variant="primary">Ha</Button>
+                  <Button className="but2" variant="primary">
+                    Ha
+                  </Button>
                 </Link>
               </Modal.Footer>
             </Modal>
