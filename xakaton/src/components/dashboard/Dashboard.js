@@ -1,51 +1,37 @@
 import React, { Component } from "react";
 import { Button, Container, Modal } from "react-bootstrap";
-import { Redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../img/logoone.png";
 import "./dashboard.css";
 export default class Dashboard extends Component {
   state = {
     edit: false,
-    show:false,
-    // shows:false,
+    show: false,
+  };
+  handleClose = () => {
+    this.setState({
+      show: false,
+    });
   };
   enter = () => {
-    var username = document.querySelector("#floatingInputUsername").value;
+    var ucername = document.querySelector("#floatingInputUsername").value;
     var fullname = document.querySelector("#floatingInputFullname").value;
     var email = document.querySelector("#floatingInputEmail").value;
-    if (username != "") {
-      if (fullname != "") {
-        if (email != "") {
-          // console.log('b')
+    if (ucername !== "") {
+      if (fullname !== "") {
+        if (email !== "") {
           this.setState({
-            
-            show:true,
+            show: true,
+            username: ucername,
           });
-          
         }
       }
     }
-this.handleClose()
-    
   };
-  handleClose=()=>{
-    this.setState({
-      show:false,
-    })
-  }
-openTest=()=>{
-  var shows=this.state.shows
-  if(shows){
-    this.setState({
-    show:true,
-  })
-  }
-  
-}
+
   render() {
-    const { edit, show } = this.state;
+    const { show, username } = this.state;
     return (
-      
       <div className="body">
         <div className="asosiy">
           <div className="iconS">
@@ -112,35 +98,29 @@ openTest=()=>{
               </label>
             </div>
 
-
-
-
-
-
             <Modal show={show} onHide={this.handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Bu test sizning qaysi sohaga qiziqishingiz borligini aniqlab beradi</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={this.handleClose}>
-            Close
-            
-          </Button>
-         <Link to='/test'> <Button variant="primary">
-            Testni boshlash
-            
-          </Button></Link>
-        </Modal.Footer>
-      </Modal>
-
-
-
-
-
+              <Modal.Header>
+                <Modal.Title>Salom {username}</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <div className="bodyTitle">
+                  {" "}
+                  Bu test sizning qaysi sohaga qiziqishingiz borligini aniqlab
+                  beradi. Testni boshlashga tayyormisiz?
+                </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={this.handleClose}>
+                  Yo'q
+                </Button>
+                <Link to="/test">
+                  {" "}
+                  <Button variant="primary">Ha</Button>
+                </Link>
+              </Modal.Footer>
+            </Modal>
 
             <div className="dbtn">
-              {/* <Link to="/test"> */}
               <Button
                 onClick={this.enter}
                 variant="outline-primary"
@@ -148,8 +128,6 @@ openTest=()=>{
               >
                 Testni boshlash
               </Button>
-             
-              {/* </Link> */}
             </div>
           </Container>
         </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Dashboard from './components/dashboard/Dashboard';
 import Test from './components/main-comp/Test';
+import Tests from './js/Tests'
 import Natija from './js/Natija'
 // import Natija from './components/main-comp/Natija';
 export default class App extends Component {
@@ -14,6 +15,9 @@ export default class App extends Component {
           </Route>
           <Route exact path='/test'>
         <Test/>
+          </Route>
+          <Route exact path='/tests'>
+        <Tests/>
           </Route>
           <Route exact path='/natija'>
         <Natija/>
