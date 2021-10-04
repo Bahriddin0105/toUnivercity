@@ -85,6 +85,7 @@
   justify-content: space-evenly !important;
 }
 .modal-content {
+  color: black;
   background-color: url("../../img/modal.jpg") !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
