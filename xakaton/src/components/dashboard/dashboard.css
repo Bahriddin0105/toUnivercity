@@ -81,11 +81,10 @@
   /* text-decoration: underline; */
   line-height: 1.2;
 }
-.btn-secondary {
-  margin-left: -100px;
-}
-.but2 {
-  float: right;
+.modal-content {
+  background-color: url("../../img/modal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .modal-title {
   margin: auto;
