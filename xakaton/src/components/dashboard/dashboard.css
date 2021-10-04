@@ -75,6 +75,28 @@
   margin-top: 40px;
   margin-left: 350px;
 }
+.bodyTitle {
+  font-size: 22px;
+  text-align: center;
+  /* text-decoration: underline; */
+  line-height: 1.2;
+}
+.modal-content {
+  background-color: url("../../img/modal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.modal-title {
+  margin: auto;
+}
+.header {
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+.user {
+  color: rgba(0, 0, 255, 0.678);
+}
 
 @media (max-width: 321px) {
   .asosiy {
@@ -84,52 +106,48 @@
   .body {
     height: 630px;
   }
-  .dbtn{
-      
+  .dbtn {
     margin-top: 40px;
     margin-left: 20%;
   }
 }
-@media(min-width:322px) and (max-width:426px){
-    .asosiy {
-        width: 300px;
-        margin: auto;
-      }
-      .body {
-        height: 630px;
-      }
-      .dbtn{
-          
-        margin-top: 40px;
-        margin-left: 20%;
-      }
+@media (min-width: 322px) and (max-width: 426px) {
+  .asosiy {
+    width: 300px;
+    margin: auto;
+  }
+  .body {
+    height: 630px;
+  }
+  .dbtn {
+    margin-top: 40px;
+    margin-left: 20%;
+  }
 }
-@media(min-width:427px) and (max-width:769px){
-    .asosiy {
-        width: 400px;
-        margin: auto;
-      }
-      .body {
-        height: 650px;
-        background-position: center;
-      }
-      .dbtn{
-          
-        margin-top: 40px;
-        margin-left: 28%;
-      }
+@media (min-width: 427px) and (max-width: 769px) {
+  .asosiy {
+    width: 400px;
+    margin: auto;
+  }
+  .body {
+    height: 650px;
+    background-position: center;
+  }
+  .dbtn {
+    margin-top: 40px;
+    margin-left: 28%;
+  }
 }
-@media(min-width:770px) and (max-width:1025px){
-    .asosiy {
-        width: 500px;
-        margin: auto;
-      }
-      .body{
-          height: 650px;
-      }
-      .dbtn{
-          
-        margin-top: 40px;
-        margin-left: 31%;
-      }
+@media (min-width: 770px) and (max-width: 1025px) {
+  .asosiy {
+    width: 500px;
+    margin: auto;
+  }
+  .body {
+    height: 650px;
+  }
+  .dbtn {
+    margin-top: 40px;
+    margin-left: 31%;
+  }
 }
