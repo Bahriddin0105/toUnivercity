@@ -84,8 +84,6 @@ const Variant = styled.div `
       background: #0099ff;
       color: #fff;
       .order{
-        /* background: #00355f; */
-        /* background: #181847; */
         background: #090979;
         color: #fff;
       }
@@ -112,8 +110,3 @@ const Variant = styled.div `
 `;
 
 export  {Container, Variant};
-
-
-// background: #1A2980;  /* fallback for old browsers */
-// background: -webkit-linear-gradient(to top, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
-// background: linear-gradient(to top, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

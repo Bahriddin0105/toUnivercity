@@ -9,12 +9,6 @@ import { getQuestions } from "../../cerver/face-server";
 export default class Test extends Component {
   state = {
     tests: [],
-    categorys: {
-      IT: "",
-      Jdwu: "",
-      Jdhwu: "",
-      Jdhiuwu: ""
-    },
     transform: 0,
   };
 
@@ -25,23 +19,16 @@ export default class Test extends Component {
     });
   }
 
-//   async componentDidMount() {
-//     // GET request using axios with async/await
-//     const response = await axios.get('https://api.npms.io/v2/search?q=react');
-//     this.setState({ totalReactPackages: response.data.total })
-// }
+  handleBtnAndNextQuestion = (e, categoryVal) => {
+    categoryVal += e;
+    console.log(categoryVal + "  value=" + e);
 
-  handleBtn = (e, category) => {
-    category += e;
-  }
-
-  nextQuestion = () => {
     let transform = this.state.transform;
     transform -= 680;
     document.querySelector(
       ".slider"
     ).style.transform = `translateY(${transform}px)`;
-    this.setState({ transform });
+    this.setState({ transform, categoryVal });
   };
 
   render() {
@@ -51,7 +38,7 @@ export default class Test extends Component {
       <Container>
         <div className='box'>
           <div className='slider'>
-            {tests.map(({ _id, title, variants }) => (
+            {tests.map(({ _id, title, variants, category }) => (
               <>
                 {order >= 4 ? (
                   <div className="d-flex justify-content-center h-50 align-items-center m-5 p-5">
@@ -65,7 +52,8 @@ export default class Test extends Component {
                     askTitle={title}
                     variants={variants}
                     order={order++}
-                    onNextQuestion={this.nextQuestion}
+                    categoryVal = {category.value}
+                    onBtnAndNextQuestion={this.handleBtnAndNextQuestion}
                   />
                 )}
               </>
@@ -77,7 +65,3 @@ export default class Test extends Component {
   }
 }
 
-// https://github.com/chrisblakely01/quiz-app/blob/master/final/src/App.js#L43
-// https://reactjs.org/docs/hooks-state.html
-// https://codepen.io/Jake_Woods/pen/vYYoYxo
-// https://freefrontend.com/javascript-carousels/
