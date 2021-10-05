@@ -42,6 +42,12 @@ export default class Test extends Component {
         value: 0,
       },
     ],
+    value: {
+      art: 0,
+      it: 0,
+      business: 0,
+      technican: 0,
+    }
   };
 
   componentDidMount() {
@@ -69,27 +75,23 @@ export default class Test extends Component {
     this.setState({ transform });
   };
 
-  // incrument = () => {
-  //   let order = this.state.order++;
-  //   this.setState({order});
-  //   console.log(order);
-  //   return order;
-  // }
-
   render() {
     const { tests, variants } = this.state;
     let order = 1;
-    if(order > 3) return
-      <div className='d-flex justify-content-center h-50 align-items-center m-5 p-5'>
-        <Link to='/natija'>
-          <button className='btn btn-primary'>Show result</button>
-        </Link>
-      </div>
+
     return (
       <Container>
         <div className='box'>
           <div className='slider'>
-                {tests.map(({ _id, title, category }) => (
+            {tests.map(({ _id, title, category }) => (
+              <>
+                {order == 3 ? (
+                  <div className='d-flex justify-content-center h-50 align-items-center m-5 p-5'>
+                    <Link >
+                      <button className='btn btn-primary'>Show result</button>
+                    </Link>
+                  </div>
+                ) : (
                   <Question
                     key={_id}
                     askTitle={title}
@@ -98,7 +100,9 @@ export default class Test extends Component {
                     category={category}
                     onBtnAndNextQuestion={this.handleBtnAndNextQuestion}
                   />
-                ))}
+                )}
+              </>
+            ))}
           </div>
         </div>
       </Container>
