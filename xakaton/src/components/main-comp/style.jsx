@@ -9,6 +9,16 @@ const Container = styled.div`
     background: linear-gradient(#ffffff, #0055ff);
     .slider{
       transition: all .8s ease-out;
+      .d-flex{
+        height: 500px;
+        .btn{
+          width: 300px;
+          height: 80px;
+          border-radius: 20px;
+          font-size: 22px;
+          animation: btn 1.5s infinite;
+        }
+      }
     }
     .box{
       width: 1100px;
@@ -65,6 +75,7 @@ const Container = styled.div`
       }
     }
   }
+
 `;
 const Variant = styled.div `
   &{

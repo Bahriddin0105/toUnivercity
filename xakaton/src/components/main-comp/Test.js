@@ -1,10 +1,12 @@
 /** @format */
 
 import React, { Component } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Container } from "./style";
 import Question from "./question";
+import Natija from "../result/Natija";
 import { Link } from "react-router-dom";
-import { getQuestions } from "../../cerver/new-server";
+import axios from "axios";
 
 export default class Test extends Component {
   state = {
@@ -47,17 +49,25 @@ export default class Test extends Component {
       it: 0,
       business: 0,
       technican: 0,
-    }
+    },
+    block: 'display: "block"',
+    none: 'display: "none"',
   };
 
   componentDidMount() {
-    const tests = getQuestions();
-    this.setState({
-      tests,
-    });
+    axios
+      .get("https://questions01.herokuapp.com")
+      .then((res) => {
+        this.setState({
+          tests: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
-  handleBtnAndNextQuestion = (e, categoryTitle) => {
+  handleVriantAndNextQuestion = (e, categoryTitle) => {
     this.state.category.map((category) => {
       if (categoryTitle === category.title) {
         category.value += e;
@@ -75,37 +85,48 @@ export default class Test extends Component {
     this.setState({ transform });
   };
 
+  onBtn = () => {
+    document.getElementById("none").style.display="none";
+    document.getElementById("result").style.display="block";
+    // let block = this.state.block;
+    // let none = this.state.none;
+    // none = 'display: "block"';
+    // block = 'display: "none"';
+    // console.log(block, none);
+    // this.setState({ block, none });
+  };
+
   render() {
-    const { tests, variants } = this.state;
+    const { tests, variants, category, block, none } = this.state;
     let order = 1;
 
     return (
-      <Container>
-        <div className='box'>
-          <div className='slider'>
-            {tests.map(({ _id, title, category }) => (
-              <>
-                {order == 3 ? (
-                  <div className='d-flex justify-content-center h-50 align-items-center m-5 p-5'>
-                    <Link >
-                      <button className='btn btn-primary'>Show result</button>
-                    </Link>
-                  </div>
-                ) : (
-                  <Question
-                    key={_id}
-                    askTitle={title}
-                    variants={variants}
-                    order={order++}
-                    category={category}
-                    onBtnAndNextQuestion={this.handleBtnAndNextQuestion}
-                  />
-                )}
-              </>
-            ))}
+      <>
+        <Container id='none' style={{block}}>
+          <div className='box'>
+            <div className='slider'>
+              {tests.map(({ _id, title, category }) => (
+                <Question
+                  key={_id}
+                  askTitle={title}
+                  variants={variants}
+                  order={order++}
+                  category={category}
+                  onVriantAndNextQuestion={this.handleVriantAndNextQuestion}
+                />
+              ))}
+              <div className='d-flex justify-content-center align-items-center m-5 p-5'>
+                <button
+                  className='btn btn-primary'
+                  onClick={() => this.onBtn()}>
+                  Show result
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+        <Natija category={category} style={{none}} id="result"/>
+      </>
     );
   }
 }

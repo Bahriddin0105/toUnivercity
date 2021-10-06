@@ -18,3 +18,11 @@ code {
   box-sizing: border-box;
 }
 
+@keyframes btn {
+  0%, 100%{
+
+  }
+  50%{
+    transform: scale(1.05);
+  }
+}

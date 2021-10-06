@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
-import Test from '../main-comp/Test';
-export default class Natija extends Component {
-	render() {
+import ChartDoughnut from './chart';
+const  Natija = ({category}) => {
 		return (
 			<Main>
-				<div className="container">
+				<ChartDoughnut category={category}/>
+				{/* <div className="container">
 
 <h1 className="text-center m-5">Results</h1>
 <div className="d-flex justify-content-between align-items-center p-3">
@@ -57,15 +57,17 @@ export default class Natija extends Component {
 	<button className="btn btn-primary mx-4">Universities</button>
 	<button className="btn btn-primary mx-4">Career Information</button>
 	<button className="btn btn-primary mx-4">Print Results</button>
-</div>
+</div> */}
 			</Main>
 		)
 	}
-}
 
 const Main = styled.div`
+/* display: none; */
 	background: linear-gradient(#ffffff, #00d4ff);
 	height: auto;
 	padding-bottom: 40px;
 	font-size: 16px;
 `;
+
+export default Natija;

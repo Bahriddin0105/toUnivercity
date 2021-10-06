@@ -20,9 +20,6 @@ export default class App extends Component {
           <Route exact path='/test'>
             <Test />
           </Route>
-          <Route exact path='/natija'>
-            <Natija />
-          </Route>
         </Switch>
       </BrowserRouter>
     );
